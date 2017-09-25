@@ -21,7 +21,7 @@ import {merge} from 'image-glue'
 
 const image1 = fs.readFileSync('./image1.jpg')
 const image2 = fs.readFileSync('./image2.jpg')
-const opts = { format: 'jpg', background: { r: 150, g: 150, b: 150 } }
+const opts = { format: 'jpeg', background: { r: 150, g: 150, b: 150 } }
 merge([image1, image2], opts).then(combinedImage => fs.writeFileSync('./combined-image.jpg', combinedImage))
 ```
 
