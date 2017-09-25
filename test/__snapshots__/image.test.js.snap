@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`merge from transparent 1`] = `
+Object {
+  "channels": 4,
+  "format": "png",
+  "hasAlpha": true,
+  "height": 100,
+  "width": 100,
+}
+`;
+
+exports[`merge from transparent 2`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 50,
+  "width": 50,
+}
+`;
+
+exports[`merge from transparent 3`] = `
+Object {
+  "channels": 4,
+  "format": "png",
+  "hasAlpha": true,
+  "height": 50,
+  "width": 100,
+}
+`;
+
+exports[`merge merge equal size images 1`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 50,
+  "width": 50,
+}
+`;
+
+exports[`merge merge equal size images 2`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 50,
+  "width": 50,
+}
+`;
+
+exports[`merge merge equal size images 3`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 50,
+  "width": 100,
+}
+`;
+
+exports[`merge merge larger image with smaller image 1`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 100,
+  "width": 100,
+}
+`;
+
+exports[`merge merge larger image with smaller image 2`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 50,
+  "width": 50,
+}
+`;
+
+exports[`merge merge larger image with smaller image 3`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 50,
+  "width": 100,
+}
+`;
+
+exports[`merge merge smaller image with larger image 1`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 50,
+  "width": 50,
+}
+`;
+
+exports[`merge merge smaller image with larger image 2`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 100,
+  "width": 100,
+}
+`;
+
+exports[`merge merge smaller image with larger image 3`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 50,
+  "width": 100,
+}
+`;
+
+exports[`merge target background color 1`] = `
+Object {
+  "channels": 4,
+  "format": "png",
+  "hasAlpha": true,
+  "height": 100,
+  "width": 100,
+}
+`;
+
+exports[`merge target background color 2`] = `
+Object {
+  "channels": 4,
+  "format": "png",
+  "hasAlpha": true,
+  "height": 100,
+  "width": 100,
+}
+`;
+
+exports[`merge target background color 3`] = `
+Object {
+  "channels": 4,
+  "format": "png",
+  "hasAlpha": true,
+  "height": 100,
+  "width": 200,
+}
+`;
+
+exports[`merge target filetype 1`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 50,
+  "width": 50,
+}
+`;
+
+exports[`merge target filetype 2`] = `
+Object {
+  "channels": 4,
+  "format": "png",
+  "hasAlpha": true,
+  "height": 100,
+  "width": 100,
+}
+`;
+
+exports[`merge target filetype 3`] = `
+Object {
+  "channels": 4,
+  "format": "png",
+  "hasAlpha": true,
+  "height": 50,
+  "width": 100,
+}
+`;
+
+exports[`merge to transparent 1`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 50,
+  "width": 50,
+}
+`;
+
+exports[`merge to transparent 2`] = `
+Object {
+  "channels": 4,
+  "format": "png",
+  "hasAlpha": true,
+  "height": 100,
+  "width": 100,
+}
+`;
+
+exports[`merge to transparent 3`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 50,
+  "width": 100,
+}
+`;
