@@ -27,8 +27,10 @@ function getOptions(metadata1, metadata2, opts) {
   }
 }
 
-function resizeImage(file, height) {
-  return sharp(file).resize(null, height).toBuffer()
+async function resizeImage(file, height) {
+  const resizedFile = await sharp(file).resize(null, height).toBuffer()
+  const metadata = await getMetadata(resizedFile)
+  return { file: resizedFile, metadata }
 }
 
 export const merge = async (files, opts = {}) => {
@@ -39,13 +41,11 @@ export const merge = async (files, opts = {}) => {
   const [metadata1, metadata2] = await Promise.all([getMetadata(files[0]), getMetadata(files[1])])
 
   if (metadata1.height > metadata2.height) {
-    const resized = await resizeImage(files[0], metadata2.height)
-    const resizedMetadata = await getMetadata(resized)
-    return createFile(resized, files[1], getOptions(resizedMetadata, metadata2, opts))
+    const { file, metadata } = await resizeImage(files[0], metadata2.height)
+    return createFile(file, files[1], getOptions(metadata, metadata2, opts))
   } else if (metadata2.height > metadata1.height) {
-    const resized = await sharp(files[1]).resize(null, metadata1.height).toBuffer()
-    const resizedMetadata = await getMetadata(resized)
-    return createFile(files[0], resized, getOptions(metadata1, resizedMetadata, opts))
+    const { file, metadata } = await resizeImage(files[1], metadata1.height)
+    return createFile(files[0], file, getOptions(metadata1, metadata, opts))
   } else {
     return createFile(files[0], files[1], getOptions(metadata1, metadata2, opts))
   }
