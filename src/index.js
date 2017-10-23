@@ -22,8 +22,7 @@ function getOptions(metadata1, metadata2, opts) {
       r: 255,
       g: 255,
       b: 255
-    },
-    quality: 100
+    }
   }
 }
 
