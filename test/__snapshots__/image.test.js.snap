@@ -60,6 +60,36 @@ Object {
 }
 `;
 
+exports[`merge merge equal size images with transparency 1`] = `
+Object {
+  "channels": 4,
+  "format": "png",
+  "hasAlpha": true,
+  "height": 50,
+  "width": 50,
+}
+`;
+
+exports[`merge merge equal size images with transparency 2`] = `
+Object {
+  "channels": 4,
+  "format": "png",
+  "hasAlpha": true,
+  "height": 50,
+  "width": 50,
+}
+`;
+
+exports[`merge merge equal size images with transparency 3`] = `
+Object {
+  "channels": 4,
+  "format": "png",
+  "hasAlpha": true,
+  "height": 50,
+  "width": 100,
+}
+`;
+
 exports[`merge merge larger image with smaller image 1`] = `
 Object {
   "channels": 3,

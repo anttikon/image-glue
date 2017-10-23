@@ -1,11 +1,11 @@
 ## image-glue
 
 Library to combine two images:
-![](https://raw.githubusercontent.com/anttikon/image-glue/master/misc/100x100_donut.png)
-➕
 ![](https://raw.githubusercontent.com/anttikon/image-glue/master/misc/50x50_sun.png)
+➕
+![](https://raw.githubusercontent.com/anttikon/image-glue/master/misc/50x50_v.png)
 🔜
-![](https://raw.githubusercontent.com/anttikon/image-glue/master/misc/50x50_donut_sun.png)
+![](https://raw.githubusercontent.com/anttikon/image-glue/master/misc/50x50_sun_v.png)
 
 ### Installation
 

@@ -1,6 +1,6 @@
 {
   "name": "image-glue",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "JavaScript library to combine two images together",
   "main": "build/index.js",
   "keywords": [

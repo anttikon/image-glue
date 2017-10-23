@@ -28,6 +28,18 @@ describe('merge', () => {
     await expectImage(mergedFile)
   })
 
+  it('merge equal size images with transparency', async () => {
+    const file1 = fs.readFileSync(path.resolve(__dirname, 'images/50x50_sun.png'))
+    const file2 = fs.readFileSync(path.resolve(__dirname, 'images/50x50_v.png'))
+
+    await expectImage(file1)
+    await expectImage(file2)
+
+    const mergedFile = await merge([file1, file2])
+    fs.writeFileSync(path.resolve(__dirname, 'results/50x50_sun_v.png'), mergedFile)
+    await expectImage(mergedFile)
+  })
+
   it('merge smaller image with larger image', async () => {
     const file1 = fs.readFileSync(path.resolve(__dirname, 'images/50x50_sun.jpg'))
     const file2 = fs.readFileSync(path.resolve(__dirname, 'images/100x100_beer.jpg'))
