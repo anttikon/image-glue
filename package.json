@@ -7,6 +7,13 @@
     "combine",
     "image"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anttikon/image-glue"
+  },
+  "bugs": {
+    "url": "https://github.com/anttikon/image-glue/issues"
+  },
   "babel": {
     "plugins": [
       "transform-runtime"
