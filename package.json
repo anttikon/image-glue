@@ -23,7 +23,7 @@
   "author": "Antti Kontoniemi",
   "license": "MIT",
   "dependencies": {
-    "sharp": "^0.18.4"
+    "sharp": "^0.19.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
