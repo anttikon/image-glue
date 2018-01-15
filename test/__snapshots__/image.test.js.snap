@@ -150,6 +150,46 @@ Object {
 }
 `;
 
+exports[`merge set quality to 1 1`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 100,
+  "width": 100,
+}
+`;
+
+exports[`merge set quality to 1 2`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 100,
+  "width": 100,
+}
+`;
+
+exports[`merge set quality to 100 1`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 100,
+  "width": 100,
+}
+`;
+
+exports[`merge set quality to 100 2`] = `
+Object {
+  "channels": 3,
+  "format": "jpeg",
+  "hasAlpha": false,
+  "height": 100,
+  "width": 100,
+}
+`;
+
 exports[`merge target background color 1`] = `
 Object {
   "channels": 4,

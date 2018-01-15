@@ -6,10 +6,11 @@ async function getMetadata(file) {
 }
 
 async function createFile(file1, file2, opts) {
-  let image = sharp({ create: opts })[opts.format]({quality:100})
-  image = sharp(await image.toBuffer()).overlayWith(file1, { gravity: sharp.gravity.west })[opts.format]({quality:100})
-  image = sharp(await image.toBuffer()).overlayWith(file2, { gravity: sharp.gravity.east })[opts.format]({quality:100})
-  return image[opts.format]({quality:100}).toBuffer()
+  const { output } = opts
+  let image = sharp({ create: opts })[opts.format](output)
+  image = sharp(await image.toBuffer()).overlayWith(file1, { gravity: sharp.gravity.west })[opts.format](output)
+  image = sharp(await image.toBuffer()).overlayWith(file2, { gravity: sharp.gravity.east })[opts.format](output)
+  return image[opts.format](output).toBuffer()
 }
 
 function getOptions(metadata1, metadata2, opts) {
@@ -18,6 +19,7 @@ function getOptions(metadata1, metadata2, opts) {
     height: metadata1.height,
     channels: metadata1.channels,
     format: opts.format ? opts.format : metadata1.format,
+    output: opts.output || {},
     background: opts.background ? opts.background : metadata1.hasAlpha ? { r: 0, g: 0, b: 0, alpha: 0 } : {
       r: 255,
       g: 255,

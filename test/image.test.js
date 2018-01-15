@@ -16,6 +16,30 @@ describe('merge', () => {
     }
   })
 
+  it('set quality to 1', async () => {
+    const file1 = fs.readFileSync(path.resolve(__dirname, 'images/100x100_beer.jpg'))
+    const file2 = fs.readFileSync(path.resolve(__dirname, 'images/100x100_donut.jpg'))
+
+    await expectImage(file1)
+    await expectImage(file2)
+
+    const mergedFile = await merge([file1, file2], { output: { quality: 1 } })
+    fs.writeFileSync(path.resolve(__dirname, 'results/q1_100x100_beer_donut.jpg'), mergedFile)
+    expect(fs.statSync(`${__dirname}/results/q1_100x100_beer_donut.jpg`).size).toEqual(642)
+  })
+
+  it('set quality to 100', async () => {
+    const file1 = fs.readFileSync(path.resolve(__dirname, 'images/100x100_beer.jpg'))
+    const file2 = fs.readFileSync(path.resolve(__dirname, 'images/100x100_donut.jpg'))
+
+    await expectImage(file1)
+    await expectImage(file2)
+
+    const mergedFile = await merge([file1, file2], { output: { quality: 100 } })
+    fs.writeFileSync(path.resolve(__dirname, 'results/q100_100x100_beer_donut.jpg'), mergedFile)
+    expect(fs.statSync(`${__dirname}/results/q100_100x100_beer_donut.jpg`).size).toEqual(21291)
+  })
+
   it('merge equal size images', async () => {
     const file1 = fs.readFileSync(path.resolve(__dirname, 'images/50x50_sun.jpg'))
     const file2 = fs.readFileSync(path.resolve(__dirname, 'images/50x50_v.jpg'))
