@@ -2,9 +2,9 @@
 
 Library to combine two images:
 ![](https://raw.githubusercontent.com/anttikon/image-glue/master/misc/50x50_sun.png)
-➕
++
 ![](https://raw.githubusercontent.com/anttikon/image-glue/master/misc/50x50_v.png)
-🔜
+=>
 ![](https://raw.githubusercontent.com/anttikon/image-glue/master/misc/50x50_sun_v.png)
 
 image-glue uses [sharp](https://www.npmjs.com/package/sharp). Great library, thanks! 👏
