@@ -37,7 +37,7 @@ describe('merge', () => {
 
     const mergedFile = await merge([file1, file2], { output: { quality: 100 } })
     fs.writeFileSync(path.resolve(__dirname, 'results/q100_100x100_beer_donut.jpg'), mergedFile)
-    expect(fs.statSync(`${__dirname}/results/q100_100x100_beer_donut.jpg`).size).toEqual(21291)
+    expect(fs.statSync(`${__dirname}/results/q100_100x100_beer_donut.jpg`).size).toEqual(21056)
   })
 
   it('merge equal size images', async () => {
